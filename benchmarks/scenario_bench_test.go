@@ -86,6 +86,14 @@ func BenchmarkDisabledWithoutFields(b *testing.B) {
 			}
 		})
 	})
+	b.Run("gommon/log", func(b *testing.B) {
+		logger := newDisabledGommon()
+		b.RunParallel(func(pb *testing.PB) {
+			for pb.Next() {
+				logger.Info(getMessage(0))
+			}
+		})
+	})
 	b.Run("rs/zerolog", func(b *testing.B) {
 		logger := newDisabledZerolog()
 		b.ResetTimer()
@@ -308,6 +316,15 @@ func BenchmarkWithoutFields(b *testing.B) {
 	})
 	b.Run("sirupsen/logrus", func(b *testing.B) {
 		logger := newLogrus()
+		b.ResetTimer()
+		b.RunParallel(func(pb *testing.PB) {
+			for pb.Next() {
+				logger.Info(getMessage(0))
+			}
+		})
+	})
+	b.Run("gommon/log", func(b *testing.B) {
+		logger := newGommon()
 		b.ResetTimer()
 		b.RunParallel(func(pb *testing.PB) {
 			for pb.Next() {

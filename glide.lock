@@ -1,5 +1,5 @@
-hash: f073ba522c06c88ea3075bde32a8aaf0969a840a66cab6318a0897d141ffee92
-updated: 2017-07-22T18:06:49.598185334-07:00
+hash: 4eed0ec88dcfdd9e7244827f130a5ed49e58fe6cd76e8ba3025739294fd5eb00
+updated: 2017-09-16T13:50:20.714434254-07:00
 imports:
 - name: go.uber.org/atomic
   version: 4e336646b2ef9fc6e47be8e21594178f98e5ebcf
@@ -18,6 +18,12 @@ testImports:
   version: 04cdfd42973bb9c8589fd6a731800cf222fde1a9
   subpackages:
   - spew
+- name: github.com/dyweb/gommon
+  version: 7210b99a9b8cfee15e4aa8a0beb70a9821dc6255
+  subpackages:
+  - log
+  - structure
+  - util/runtimeutil
 - name: github.com/fatih/color
   version: 62e9147c64a1ed519147b62a56a14e83e2be02c1
 - name: github.com/go-kit/kit
