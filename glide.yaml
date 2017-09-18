@@ -7,7 +7,7 @@ import:
   version: ^1
 testImport:
 - package: github.com/dyweb/gommon
-  version: 7210b99a9b8cfee15e4aa8a0beb70a9821dc6255
+  version: c27dc8aa88cdb61ad2dc89dbdd4dbc731461f4ed
   subpackages:
     - log
 - package: github.com/satori/go.uuid

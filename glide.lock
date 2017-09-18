@@ -1,5 +1,5 @@
-hash: 4eed0ec88dcfdd9e7244827f130a5ed49e58fe6cd76e8ba3025739294fd5eb00
-updated: 2017-09-16T13:50:20.714434254-07:00
+hash: b292e74113770135a35ebaca4642f0f1f53dfa3a57d659bd589b0cbb273b8ffa
+updated: 2017-09-17T23:52:43.115557867-07:00
 imports:
 - name: go.uber.org/atomic
   version: 4e336646b2ef9fc6e47be8e21594178f98e5ebcf
@@ -19,7 +19,7 @@ testImports:
   subpackages:
   - spew
 - name: github.com/dyweb/gommon
-  version: 7210b99a9b8cfee15e4aa8a0beb70a9821dc6255
+  version: c27dc8aa88cdb61ad2dc89dbdd4dbc731461f4ed
   subpackages:
   - log
   - structure
@@ -61,7 +61,7 @@ testImports:
 - name: github.com/sirupsen/logrus
   version: 7dd06bf38e1e13df288d471a57d5adbac106be9e
 - name: github.com/stretchr/testify
-  version: f6abca593680b2315d2075e0f5e2a9751e3f431a
+  version: 2402e8e7a02fc811447d11f881aa9746cdc57983
   subpackages:
   - assert
   - require

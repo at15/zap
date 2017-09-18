@@ -325,6 +325,19 @@ func BenchmarkWithoutFields(b *testing.B) {
 	})
 	b.Run("gommon/log", func(b *testing.B) {
 		logger := newGommon()
+		// entry is created with pkg field set when RegisterPkg is used
+		// FIXME: it seems DeleteField does not decrease the bytes allocated
+		logger.DeleteField("pkg")
+		b.ResetTimer()
+		b.RunParallel(func(pb *testing.PB) {
+			for pb.Next() {
+				logger.Info(getMessage(0))
+			}
+		})
+	})
+	b.Run("gommon/log-pkg", func(b *testing.B) {
+		logger := newGommon()
+		// we keep the pkg field
 		b.ResetTimer()
 		b.RunParallel(func(pb *testing.PB) {
 			for pb.Next() {
