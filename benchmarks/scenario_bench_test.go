@@ -88,6 +88,7 @@ func BenchmarkDisabledWithoutFields(b *testing.B) {
 	})
 	b.Run("gommon/log", func(b *testing.B) {
 		logger := newDisabledGommon()
+		b.ResetTimer()
 		b.RunParallel(func(pb *testing.PB) {
 			for pb.Next() {
 				logger.Info(getMessage(0))
